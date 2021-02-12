@@ -1,0 +1,12 @@
+{
+    "name": "project/payroll",
+    "description": "Computerize Payroll System in Nigerian Bottling Company",
+    "require": {
+        "twbs/bootstrap": "5.0.0-beta1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Payroll\\": "server/"
+        }
+    }
+}

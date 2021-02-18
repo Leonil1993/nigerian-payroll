@@ -39,12 +39,12 @@ class DeleteUser
 				'employee_id' => $this->id
 			]
 		);
-		$employeePayrollSummary = $this->controller->delete(
-			"DELETE FROM employee_payroll_summary_tbl WHERE employee_id = ?",
-			[
-				'employee_id' => $this->id
-			]
-		);
+		//$employeePayrollSummary = $this->controller->delete(
+		//	"DELETE FROM employee_payroll_summary_tbl WHERE employee_id = ?",
+		//	[
+		//		'employee_id' => $this->id
+		//	]
+		//);
 		$timeAttendance = $this->controller->delete(
 			"DELETE FROM time_attendance_tbl WHERE employee_id = ?",
 			[
@@ -64,7 +64,7 @@ class DeleteUser
 			]
 		);
 
-		if ($employee && $salary && $contributions && $payrollProcessing && $employeePayrollSummary && $timeAttendance && $leave && $leave_history) {
+		if ($employee && $salary && $contributions && $payrollProcessing && $timeAttendance && $leave && $leave_history) {
 			return true;
 		}
 	}

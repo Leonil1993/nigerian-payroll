@@ -15,6 +15,9 @@
         -moz-user-select: none;
         user-select: none;
       }
+      img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+        display: none;
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;

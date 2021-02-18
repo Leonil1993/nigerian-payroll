@@ -1,4 +1,4 @@
-<main data-main="employees" class="d-none col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main data-main="employees" class="d-none col-md-9 ms-sm-auto col-lg-9 px-md-4">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 id="employees">Employees</h1>
     <button data-nav="add-employee" type="button" class="button btn btn-sm btn-outline-primary" ><span data-feather="user-plus"></span> Add New Employee</button>

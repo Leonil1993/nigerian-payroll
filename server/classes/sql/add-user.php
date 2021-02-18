@@ -125,6 +125,16 @@ class AddUser
 	    }
 	}
 	public function createPayroll(){
+		if($this->controller->select(
+			"SELECT * FROM payroll_period_tbl WHERE month = ? AND to_day = ? AND from_day = ? AND year = ? AND admin_id = ?",
+			[
+				'month' => $this->month,
+		        'to_day' => $this->to,
+		        'from_day' => $this->from,
+		        'year' => $this->year,
+		        'admin_id' => $_SESSION['adminID']
+			]
+		))return false;
 	    $payroll = $this->controller->insert(
 	    	"INSERT INTO payroll_period_tbl (month, to_day, from_day, year, admin_id, total_pay) VALUES (?, ?, ?, ?, ?, ?)",
 	    	[
@@ -136,7 +146,7 @@ class AddUser
 		        'total_pay' => 0,
 	    	]
 	    );
-	    $payroll_period_id;
+	    $payroll_period_id = null;
 	    foreach ($this->controller->select(
 	    	"SELECT MAX(id) AS highest FROM payroll_period_tbl",
 	    	[]

@@ -111,7 +111,7 @@ class UserInfo
 	    	if(password_verify($this->password, $this->getPasswordHash()))
 	    	{
 				//session_regenerate_id(true);
-
+	    		$_SESSION['adminUN'] = $this->username;
 	    		$_SESSION['adminID'] = $this->userId();
 
 	    		return true;
@@ -249,7 +249,7 @@ class UserInfo
 	}
 	//return active payroll or latest na id
 	public function latestPayrollId(){
-		$payroll_period_id;
+		$payroll_period_id = null;
 	    foreach ($this->controller->select(
 	    	"SELECT MAX(id) AS highest FROM payroll_period_tbl WHERE admin_id = ?",
 	    	[

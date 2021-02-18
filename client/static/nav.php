@@ -1,6 +1,11 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar click-remove-show collapse">
+<nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block bg-light sidebar click-remove-show collapse">
   <div class="position-sticky pt-3">
     <ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link text-secondary button " aria-current="page" href="#">
+          <h3>Admin: <?php echo $_SESSION['adminUN'] ?> </h3>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link active button " data-nav="overall-salary" aria-current="page" href="#">
           <span data-feather="pie-chart"></span>

@@ -1,4 +1,4 @@
-<main data-main="payroll-processing" class="d-none col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main data-main="payroll-processing" class="d-none col-md-9 ms-sm-auto col-lg-9 px-md-4">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 id="employees">Payroll Processing</h1>
     <h2 id="employees"><span class="icon-large" data-feather="calendar"></span> Payroll Period <span class="latest-payroll text-primary"></span></h2>

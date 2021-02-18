@@ -11,11 +11,9 @@ class Controller
 	private $pdoConn;
 
 	public function __construct(){
-
-		//$this->pdo = new ServerConnect('localhost', 'id16108944_leonil1993', '1993_LimaBravoOscar_08', 'id16108944_nigerian_db');
+		//$this->pdo = new ServerConnect('localhost', 'id16108944_leonil1993', '1993_LimaBravoOscar_08', 'id16108944_nigerianpayroll_db');
 		$this->pdo = new ServerConnect('localhost', 'root', '', 'nigerian_db');
 		$this->pdoConn = $this->pdo->connect();
-
 	}
 	public function select($sql, $array){
 
